@@ -1,0 +1,39 @@
+﻿@model ApuestasPolla.Models.TipoPuntaje
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>TipoPuntaje</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Descripcion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Descripcion)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Puntos)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Puntos)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Tipo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Tipo)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

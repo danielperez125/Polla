@@ -1,0 +1,43 @@
+﻿@model ApuestasPolla.Models.Partido
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Partido</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IdPartido)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IdPartido)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Fecha)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Fecha)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Descripcion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Descripcion)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FasePartido.Descripcion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FasePartido.Descripcion)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

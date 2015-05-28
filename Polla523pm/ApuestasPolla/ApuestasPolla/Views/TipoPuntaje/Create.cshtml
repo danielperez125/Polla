@@ -1,0 +1,47 @@
+﻿@model ApuestasPolla.Models.TipoPuntaje
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>TipoPuntaje</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Descripcion)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Descripcion)
+            @Html.ValidationMessageFor(model => model.Descripcion)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Puntos)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Puntos)
+            @Html.ValidationMessageFor(model => model.Puntos)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Tipo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Tipo)
+            @Html.ValidationMessageFor(model => model.Tipo)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

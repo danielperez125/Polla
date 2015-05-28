@@ -1,0 +1,36 @@
+﻿@model ApuestasPolla.Models.TipoPuntaje
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>TipoPuntaje</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Descripcion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Descripcion)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Puntos)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Puntos)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Tipo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Tipo)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
